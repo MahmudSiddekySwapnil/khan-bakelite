@@ -102,9 +102,9 @@
                     </li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/service">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="/products">Products</a></li>
                     <li class="menu-item-has-children">
-                        <a href="#">Pages</a>
+                        <a href="#">Business</a>
                         <ul class="sub-menu">
                             <li><a href="service-single.html">Service single</a></li>
                             <li><a href="project-single.html">Project single</a></li>
