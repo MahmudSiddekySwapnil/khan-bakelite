@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\landingViewController;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class AboutController extends Controller
 {

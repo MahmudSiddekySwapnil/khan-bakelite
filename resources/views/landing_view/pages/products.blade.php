@@ -25,17 +25,17 @@
                     <div class="grid">
                         <div class="img-holder-info-list">
                             <div class="img-holder">
-                                <img src="assets/images/shop/img-4.jpg" alt class="img img-responsive">
+                                <img src="landing_assets/images/shop/img-4.jpg" alt class="img img-responsive">
                             </div>
                             <div class="info-list">
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-1.png" alt></a>
+                                    <a href="/productDetails"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-2.png" alt></a>
+                                    <a href="/productDetails"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-3.png" alt></a>
+                                    <a href="/productDetails"><img src="landing_assets/images/shop/icons/icon-3.png" alt></a>
                                 </div>
                             </div>
                         </div>
@@ -57,17 +57,17 @@
                     <div class="grid">
                         <div class="img-holder-info-list">
                             <div class="img-holder">
-                                <img src="assets/images/shop/img-5.jpg" alt class="img img-responsive">
+                                <img src="landing_assets/images/shop/img-5.jpg" alt class="img img-responsive">
                             </div>
                             <div class="info-list">
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-1.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-2.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-3.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-3.png" alt></a>
                                 </div>
                             </div>
                         </div>
@@ -89,17 +89,17 @@
                     <div class="grid">
                         <div class="img-holder-info-list">
                             <div class="img-holder">
-                                <img src="assets/images/shop/img-6.jpg" alt class="img img-responsive">
+                                <img src="landing_assets/images/shop/img-6.jpg" alt class="img img-responsive">
                             </div>
                             <div class="info-list">
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-1.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-2.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-3.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-3.png" alt></a>
                                 </div>
                             </div>
                         </div>
@@ -121,17 +121,17 @@
                     <div class="grid">
                         <div class="img-holder-info-list">
                             <div class="img-holder">
-                                <img src="assets/images/shop/img-7.jpg" alt class="img img-responsive">
+                                <img src="landing_assets/images/shop/img-7.jpg" alt class="img img-responsive">
                             </div>
                             <div class="info-list">
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-1.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-2.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-3.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-3.png" alt></a>
                                 </div>
                             </div>
                         </div>
@@ -153,17 +153,17 @@
                     <div class="grid">
                         <div class="img-holder-info-list">
                             <div class="img-holder">
-                                <img src="assets/images/shop/img-8.jpg" alt class="img img-responsive">
+                                <img src="landing_assets/images/shop/img-8.jpg" alt class="img img-responsive">
                             </div>
                             <div class="info-list">
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-1.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-2.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-3.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-3.png" alt></a>
                                 </div>
                             </div>
                         </div>
@@ -185,17 +185,17 @@
                     <div class="grid">
                         <div class="img-holder-info-list">
                             <div class="img-holder">
-                                <img src="assets/images/shop/img-10.jpg" alt class="img img-responsive">
+                                <img src="landing_assets/images/shop/img-10.jpg" alt class="img img-responsive">
                             </div>
                             <div class="info-list">
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-1.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-2.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-3.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-3.png" alt></a>
                                 </div>
                             </div>
                         </div>
@@ -217,17 +217,17 @@
                     <div class="grid">
                         <div class="img-holder-info-list">
                             <div class="img-holder">
-                                <img src="assets/images/shop/img-11.jpg" alt class="img img-responsive">
+                                <img src="landing_assets/images/shop/img-11.jpg" alt class="img img-responsive">
                             </div>
                             <div class="info-list">
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-1.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-2.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-3.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-3.png" alt></a>
                                 </div>
                             </div>
                         </div>
@@ -249,17 +249,17 @@
                     <div class="grid">
                         <div class="img-holder-info-list">
                             <div class="img-holder">
-                                <img src="assets/images/shop/img-12.jpg" alt class="img img-responsive">
+                                <img src="landing_assets/images/shop/img-12.jpg" alt class="img img-responsive">
                             </div>
                             <div class="info-list">
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-1.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-2.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-3.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-3.png" alt></a>
                                 </div>
                             </div>
                         </div>
@@ -281,17 +281,17 @@
                     <div class="grid">
                         <div class="img-holder-info-list">
                             <div class="img-holder">
-                                <img src="assets/images/shop/img-9.jpg" alt class="img img-responsive">
+                                <img src="landing_assets/images/shop/img-9.jpg" alt class="img img-responsive">
                             </div>
                             <div class="info-list">
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-1.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-2.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
                                 </div>
                                 <div>
-                                    <a href="#"><img src="assets/images/shop/icons/icon-3.png" alt></a>
+                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-3.png" alt></a>
                                 </div>
                             </div>
                         </div>
