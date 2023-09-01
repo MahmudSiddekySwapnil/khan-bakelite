@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col col-md-3 col-sm-6">
                     <div class="widget about-widget">
-                        <div class="footer-logo"><img src="assets/images/logo.png" alt></div>
+                        <div class="footer-logo"><img src="landing_assets/images/khan.png" alt></div>
                         <ul class="contact-info">
                             <li><i class="fa fa-home"></i> 555 Main St, Salt Lake City, UT 84101</li>
                             <li><i class="fa fa-phone"></i> +1-(547)-257</li>
@@ -29,20 +29,21 @@
 
                 <div class="col col-md-3 col-sm-6">
                     <div class="widget quick-links-widget">
-                        <h3>Navigation</h3>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Service</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">News</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
+                        <h3>QR Code</h3>
+{{--                        <ul>--}}
+{{--                            <li><a href="#">Home</a></li>--}}
+{{--                            <li><a href="#">About</a></li>--}}
+{{--                            <li><a href="#">Service</a></li>--}}
+{{--                            <li><a href="#">Projects</a></li>--}}
+{{--                            <li><a href="#">Pricing</a></li>--}}
+{{--                            <li><a href="#">News</a></li>--}}
+{{--                        </ul>--}}
+{{--                        <ul>--}}
+{{--                            <li><a href="#">Gallery</a></li>--}}
+{{--                            <li><a href="#">Contact Us</a></li>--}}
+{{--                            <li><a href="#">Privacy Policy</a></li>--}}
+{{--                        </ul>--}}
+                        <img style="height:200px" src="landing_assets/images/khanbp.png" alt="Light Blue Denim Dress">
                     </div>
                 </div>
 
