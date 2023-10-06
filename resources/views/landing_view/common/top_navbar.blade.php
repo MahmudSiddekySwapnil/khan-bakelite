@@ -116,7 +116,7 @@
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="#">Blog</a>
+                        <a href="#">Gallery</a>
                         <ul class="sub-menu">
                             <li><a href="blog.html">Blog grid</a></li>
                             <li><a href="blog-right-sidebar.html">Blog right sidebar</a></li>
