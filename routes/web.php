@@ -31,10 +31,13 @@ Route::get('/', function () {
 //admin panel pages route
 Route::get('/login',[LoginController::class,'index'])->name('login');
 Route::post('/user_auth_data',[LoginController::class,'authData'])->name('login');
-Route::get('/dashboard', [AdminDashboardController::class,'index'])->name('dashboard');
+Route::get('/logout',[LoginController::class,'adminLogout'])->name('logout');
 
 
 
+Route::middleware(['admin_auth'])->group(function () {
+    Route::get('/dashboard', [AdminDashboardController::class,'index'])->name('dashboard');
+});
 
 
 

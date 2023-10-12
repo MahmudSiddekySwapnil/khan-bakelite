@@ -9,30 +9,53 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
-  public function index(){
-      return view('admin_view.pages.login');
-  }
+    /**
+     * @author Mahmud Siddeky Swapnil
+     * this method is for showing login page.
+     * if session hav admin login then it redirect to dashboard other wise it redirect to login page
+     * this is handeled by middleware.
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+      public function index(Request $request){
+          if($request->session()->has('ADMIN_LOGIN')){
+              return redirect('dashboard');
+          }else{
+              return view('admin_view.pages.login');
+          }
+      }
 
-    public function authData(Request $request){
-        // Find the user by email
-        $data = User::where('email', $request->email_address)->first();
+    /**@author Mahmud Siddeky Swapnil
+     *Find the user by email
+     *Check if a user with the provided email exists
+     * Get the password from the form
+     * Compare the input password with the hashed password from the database
+     * Passwords don't match, so the user is not authenticated
+     * User with the provided email does not exist
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
 
-        // Check if a user with the provided email exists
-        if ($data) {
-            $inputPassword = $request->password; // Get the password from the form
-            // Compare the input password with the hashed password from the database
-            if (Hash::check($inputPassword, $data->password)) {
-//            return redirect('dashboard')->with('message', 'successful');
-                return response()->json(['auth_message' => 'successful', 'url' => 'dashboard']);
+        public function authData(Request $request){
+            $data = User::where('email', $request->email_address)->first();
+            if ($data) {
+                $inputPassword = $request->password;
+                if (Hash::check($inputPassword, $data->password)) {
+                    $request->session()->put('ADMIN_LOGIN',true);
+                    return response()->json(['auth_message' => 'successful', 'url' => 'dashboard']);
 
+                } else {
+                    return response()->json(['auth_message' => 'authFailed', 'url' => 'login']);
+                }
             } else {
-                // Passwords don't match, so the user is not authenticated
-                return response()->json(['auth_message' => 'authFailed', 'url' => 'login']);
+                return response()->json(['auth_message' => 'Email Not Found', 'url' => 'login']);
             }
-        } else {
-            // User with the provided email does not exist
-            return response()->json(['auth_message' => 'Email Not Found', 'url' => 'login']);
         }
-    }
+
+
+        public  function adminLogout(Request $request){
+            session()->flush();
+            return redirect('login');
+        }
 
 }
