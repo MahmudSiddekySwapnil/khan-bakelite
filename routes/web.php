@@ -1,5 +1,8 @@
 <?php
-
+//admin
+use App\Http\Controllers\adminViewController\LoginController;
+use App\Http\Controllers\adminViewController\AdminDashboardController;
+//landing
 use App\Http\Controllers\landingViewController\AboutController;
 use App\Http\Controllers\landingViewController\ContactController;
 use App\Http\Controllers\landingViewController\HomeController;
@@ -20,10 +23,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admin_view.pages.home');
+    return view('admin_view.pages.login');
 });
 
-//pages route
+
+
+//admin panel pages route
+Route::get('/login',[LoginController::class,'index'])->name('login');
+Route::post('/user_auth_data',[LoginController::class,'authData'])->name('login');
+Route::get('/dashboard', [AdminDashboardController::class,'index'])->name('dashboard');
+
+
+
+
+
+
+
+//landing view pages route
 Route::get('/home',[HomeController::class,'index'])->name('home');
 Route::get('/contact',[ContactController::class,'index'])->name('contact');
 Route::get('/about',[AboutController::class,'index'])->name('about');
