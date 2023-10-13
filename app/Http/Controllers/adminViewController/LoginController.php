@@ -52,7 +52,12 @@ class LoginController extends Controller
             }
         }
 
-
+    /**
+     * @author Mahmud Siddeky Swapnil
+     * this method is use for logout from admin panel
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
         public  function adminLogout(Request $request){
             session()->flush();
             return redirect('login');
