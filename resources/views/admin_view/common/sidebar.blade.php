@@ -72,7 +72,7 @@
                 <div class="collapse" id="sidebarEmail">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="apps-email-inbox.html">Inbox</a>
+                            <a href="{{route('home_banner')}}">Banner</a>
                         </li>
                         <li>
                             <a href="apps-email-read.html">Read Email</a>

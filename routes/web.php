@@ -2,6 +2,7 @@
 //admin
 use App\Http\Controllers\adminViewController\LoginController;
 use App\Http\Controllers\adminViewController\AdminDashboardController;
+use \App\Http\Controllers\adminViewController\HomeBannerController;
 //landing
 use App\Http\Controllers\landingViewController\AboutController;
 use App\Http\Controllers\landingViewController\ContactController;
@@ -23,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admin_view.pages.login');
+    return view('admin_view.pages.bannerSlider');
 });
 
 
@@ -37,6 +38,10 @@ Route::get('/logout',[LoginController::class,'adminLogout'])->name('logout');
 
 Route::middleware(['admin_auth'])->group(function () {
     Route::get('/dashboard', [AdminDashboardController::class,'index'])->name('dashboard');
+    Route::get('/home_banner', [HomeBannerController::class,'index'])->name('home_banner');
+    Route::post('/home_banner_processor', [HomeBannerController::class,'bannerProcessing'])->name('home_banner_processor');
+
+
 });
 
 
