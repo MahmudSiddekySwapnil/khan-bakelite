@@ -66,16 +66,17 @@
                 <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail"
                    class="side-nav-link">
                     <i class="fa fa-cog"></i>
-                    <span> UI Management </span>
-                    <i class="fa fa-sort-desc"></i>
+                    <span>UI Management <i class="fa fa-sort-desc"></i></span>
+
                 </a>
                 <div class="collapse" id="sidebarEmail">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="{{route('home_banner')}}">Banner</a>
+
+                            <a href="{{route('home_banner')}}"><i class="fa fa-plus"></i>&nbsp;Banner</a>
                         </li>
                         <li>
-                            <a href="apps-email-read.html">Read Email</a>
+                            <a href="{{route('company_service')}}"><i class="fa fa-plus"></i>&nbsp;Service</a>
                         </li>
                     </ul>
                 </div>

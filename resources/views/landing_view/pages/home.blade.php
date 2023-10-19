@@ -13,62 +13,29 @@
     <!-- end preloader -->
 
 
-
     <!-- start of hero -->
     <section class="hero hero-slider-wrapper">
         <div class="hero-slider hero-slider-style-1">
+           @foreach($home_banner as $list)
             <div class="slide">
-                <img src="landing_assets/images/slider/slide-1.jpg" alt class="slider-bg">
+                <img src="{{ asset('storage/media/banner/' . $list->picture) }}" alt class="slider-bg">
                 <div class="container">
                     <div class="row">
                         <div class="col col-lg-8 col-sm-9 slide-caption">
-                            <h2>We provide the best <span>Industrial</span> Services worldwide</h2>
-                            <p>An unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <div class="btns">
-                                <a href="#" class="theme-btn">About us</a>
-                                <a href="#" class="theme-btn-s2">Explore</a>
-                            </div>
+                            <h2>We provide the best <span>{{ $list->title }}</span> Services worldwide</h2>
+                            <p>{{ $list->description }}</p>
+{{--                            <div class="btns">--}}
+{{--                                <a href="#" class="theme-btn">About us</a>--}}
+{{--                                <a href="#" class="theme-btn-s2">Explore</a>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="slide">
-                <img src="landing_assets/images/slider/slide-2.jpg" alt class="slider-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-lg-8 col-sm-9 slide-caption">
-                            <h2>We provide the best <span>Industrial</span> Services worldwide</h2>
-                            <p>An unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <div class="btns">
-                                <a href="#" class="theme-btn">About us</a>
-                                <a href="#" class="theme-btn-s2">Explore</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="landing_assets/images/slider/slide-3.jpg" alt class="slider-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-lg-8 col-sm-9 slide-caption">
-                            <h2>We provide the best <span>Industrial</span> Services worldwide</h2>
-                            <p>An unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <div class="btns">
-                                <a href="#" class="theme-btn">About us</a>
-                                <a href="#" class="theme-btn-s2">Explore</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
     <!-- end of hero slider -->
-
-
     <!-- start of services -->
     <section class="section-padding">
         <div class="container">

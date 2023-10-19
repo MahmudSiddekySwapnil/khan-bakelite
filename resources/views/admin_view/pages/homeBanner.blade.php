@@ -196,7 +196,6 @@
                 $('#example tbody').on('click', 'button.delete-button', function () {
                     if (confirm("Are you sure you want to delete this image?")) {
                         const id = $(this).data('id');
-
                         // Send an AJAX request to delete the image
                         $.ajax({
                             url: '/delete_banner/' + id,

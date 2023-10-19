@@ -3,6 +3,7 @@
 use App\Http\Controllers\adminViewController\LoginController;
 use App\Http\Controllers\adminViewController\AdminDashboardController;
 use \App\Http\Controllers\adminViewController\HomeBannerController;
+use \App\Http\Controllers\adminViewController\CompanyServiceController;
 //landing
 use App\Http\Controllers\landingViewController\AboutController;
 use App\Http\Controllers\landingViewController\ContactController;
@@ -24,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admin_view.pages.test');
+    return view('admin_view.pages.login');
 });
 
 
@@ -38,13 +39,14 @@ Route::get('/logout',[LoginController::class,'adminLogout'])->name('logout');
 //these routes goes under middleware
 Route::middleware(['admin_auth'])->group(function () {
     Route::get('/dashboard', [AdminDashboardController::class,'index'])->name('dashboard');
+    //admin banner
     Route::get('/home_banner', [HomeBannerController::class,'index'])->name('home_banner');
     Route::post('/home_banner_processor', [HomeBannerController::class,'bannerProcessing'])->name('home_banner_processor');
     Route::get('/show_banner_details', [HomeBannerController::class,'showBannerData'])->name('show_banner_details');
     Route::post('/manage_banner_status', [HomeBannerController::class,'mangeBannerStatus'])->name('manage_banner_status');
     Route::delete('/delete_banner/{id}', [HomeBannerController::class,'deleteBanner']);
-
-
+    //admin service
+    Route::get('/company_service', [CompanyServiceController::class,'index'])->name('company_service');
 });
 
 
