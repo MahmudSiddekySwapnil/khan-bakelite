@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\adminViewController;
 
 use App\Http\Controllers\Controller;
+use App\Models\HomeBanner;
 use App\Models\Service;
 use App\Services\ImageDeleteService;
 use App\Services\ImageUploadService;
@@ -23,7 +24,10 @@ class CompanyServiceController extends Controller
 
     }
 
-
+    /**
+     * @author mahmud siddeky swapnil
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function index()
     {
         return view('admin_view.pages.companyService');
@@ -61,8 +65,43 @@ class CompanyServiceController extends Controller
                 $model->save();
                 return response()->json(['message' => 'successful', 'url' => 'company_service']);
             }
-
-
         }
+    }
+
+    /**
+     * @param Request $request
+     * @return array
+     */
+    public function showServiceDetails(Request $request)
+    {
+        $query = Service::all();
+        return $returnedJson = array("data" => $query);
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function mangeServiceStatus(Request $request)
+    {
+
+        $model = Service::find($request->id);
+        $model->status = $request->status;
+        $model->save();
+        return response()->json(['message' => 'successful', 'url' => '/company_service', 'status' => $request->status]);
+
+    }
+
+
+    /**
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function deleteService($id)
+    {
+        $url = '/company_service';
+        $path = 'public/media/service/';
+        return $this->imageDeleteService->deleteImage(Service::class, $id, $path, $url);
+
     }
 }

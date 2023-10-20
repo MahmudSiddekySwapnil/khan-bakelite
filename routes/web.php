@@ -48,6 +48,9 @@ Route::middleware(['admin_auth'])->group(function () {
     //admin service
     Route::get('/company_service', [CompanyServiceController::class,'index'])->name('company_service');
     Route::post('/company_service_processor', [CompanyServiceController::class,'addServiceDetails'])->name('company_service_processor');
+    Route::get('/show_service_details', [CompanyServiceController::class,'showServiceDetails'])->name('show_service_details');
+    Route::delete('/delete_service/{id}', [CompanyServiceController::class,'deleteService']);
+    Route::post('/manage_service_status', [CompanyServiceController::class,'mangeServiceStatus'])->name('manage_service_status');
 
 });
 
