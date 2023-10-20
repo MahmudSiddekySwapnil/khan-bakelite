@@ -47,6 +47,8 @@ Route::middleware(['admin_auth'])->group(function () {
     Route::delete('/delete_banner/{id}', [HomeBannerController::class,'deleteBanner']);
     //admin service
     Route::get('/company_service', [CompanyServiceController::class,'index'])->name('company_service');
+    Route::post('/company_service_processor', [CompanyServiceController::class,'addServiceDetails'])->name('company_service_processor');
+
 });
 
 

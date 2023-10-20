@@ -68,12 +68,7 @@ class HomeBannerController extends Controller
 
     public function showBannerData(Request $request)
     {
-//        $homeBanners = HomeBanner::select('picture', 'title', 'description', 'status', 'image_url')
-//            ->get();
-//        return $returnedJson= array("data" => $homeBanners);
-
         $query = HomeBanner::all();
-//        Log::info($query);
         return $returnedJson = array("data" => $query);
     }
 
