@@ -3,14 +3,15 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Dashboard | Jidox - Material Design Admin & Dashboard Template</title>
+    <link rel="icon" href="khan_bakelite_image/khan_logo.png" type="image/x-icon">
+
+    <title>khan-Bakelite</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-    <meta content="Coderthemes" name="author" />
+    <meta content="kahn" name="description" />
+    <meta content="khan" name="author" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="admin_assets/images/favicon.ico">
 
     <!-- Daterangepicker css -->
     <link rel="stylesheet" href="admin_assets/vendor/daterangepicker/daterangepicker.css">
@@ -26,6 +27,7 @@
 
     <!-- Icons css -->
     <link href="admin_assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>

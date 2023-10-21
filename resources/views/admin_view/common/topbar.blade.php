@@ -113,7 +113,7 @@
 
             <li class="dropdown notification-list">
                 <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                    <i class="ri-notification-3-fill fs-22"></i>
+                    <i class="fa fa-bell-o" style="font-size:24px"></i>
                     <span class="noti-icon-badge"></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg py-0">
@@ -232,75 +232,20 @@
                 </div>
             </li>
 
-            <li class="dropdown d-none d-sm-inline-block">
-                <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                    <i class="ri-apps-2-fill fs-22"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg p-0">
 
-                    <div class="p-2">
-                        <div class="row g-0">
-                            <div class="col">
-                                <a class="dropdown-icon-item" href="#">
-                                    <img src="admin_assets/images/brands/github.png" alt="Github">
-                                    <span>GitHub</span>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a class="dropdown-icon-item" href="#">
-                                    <img src="admin_assets/images/brands/bitbucket.png" alt="bitbucket">
-                                    <span>Bitbucket</span>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a class="dropdown-icon-item" href="#">
-                                    <img src="admin_assets/images/brands/dropbox.png" alt="dropbox">
-                                    <span>Dropbox</span>
-                                </a>
-                            </div>
-                        </div>
 
-                        <div class="row g-0">
-                            <div class="col">
-                                <a class="dropdown-icon-item" href="#">
-                                    <img src="admin_assets/images/brands/slack.png" alt="slack">
-                                    <span>Slack</span>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a class="dropdown-icon-item" href="#">
-                                    <img src="admin_assets/images/brands/dribbble.png" alt="dribbble">
-                                    <span>Dribbble</span>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a class="dropdown-icon-item" href="#">
-                                    <img src="admin_assets/images/brands/behance.png" alt="Behance">
-                                    <span>Behance</span>
-                                </a>
-                            </div>
-                        </div> <!-- end row-->
-                    </div>
 
-                </div>
-            </li>
-
-            <li class="d-none d-sm-inline-block">
-                <a class="nav-link" data-bs-toggle="offcanvas" href="#theme-settings-offcanvas">
-                    <i class="ri-settings-3-fill fs-22"></i>
-                </a>
-            </li>
 
             <li class="d-none d-sm-inline-block">
                 <div class="nav-link" id="light-dark-mode">
-                    <i class="ri-moon-fill fs-22"></i>
+                    <i class="material-icons">brightness_high</i>
                 </div>
             </li>
 
 
             <li class="d-none d-md-inline-block">
                 <a class="nav-link" href="" data-toggle="fullscreen">
-                    <i class="ri-fullscreen-line fs-22"></i>
+                    <i class="fa fa-arrows" style="font-size:24px;color:skyblue"></i>
                 </a>
             </li>
 
@@ -322,31 +267,13 @@
 
                     <!-- item-->
                     <a href="pages-profile.html" class="dropdown-item">
-                        <i class="ri-account-circle-fill align-middle me-1"></i>
+                        <i class="fa fa-address-card-o"></i>
                         <span>My Account</span>
                     </a>
 
                     <!-- item-->
-                    <a href="pages-profile.html" class="dropdown-item">
-                        <i class="ri-settings-4-fill align-middle me-1"></i>
-                        <span>Settings</span>
-                    </a>
-
-                    <!-- item-->
-                    <a href="pages-faq.html" class="dropdown-item">
-                        <i class="ri-customer-service-2-fill align-middle me-1"></i>
-                        <span>Support</span>
-                    </a>
-
-                    <!-- item-->
-                    <a href="auth-lock-screen.html" class="dropdown-item">
-                        <i class="ri-lock-password-fill align-middle me-1"></i>
-                        <span>Lock Screen</span>
-                    </a>
-
-                    <!-- item-->
                     <a href="{{ route('logout') }}" class="dropdown-item">
-                        <i class="ri-logout-box-fill align-middle me-1"></i>
+                        <i class="fa fa-sign-out"></i>
                         <span>Logout</span>
                     </a>
                 </div>

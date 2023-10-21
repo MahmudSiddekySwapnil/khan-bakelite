@@ -104,4 +104,5 @@ class CompanyServiceController extends Controller
         return $this->imageDeleteService->deleteImage(Service::class, $id, $path, $url);
 
     }
+
 }

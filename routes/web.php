@@ -4,6 +4,8 @@ use App\Http\Controllers\adminViewController\LoginController;
 use App\Http\Controllers\adminViewController\AdminDashboardController;
 use \App\Http\Controllers\adminViewController\HomeBannerController;
 use \App\Http\Controllers\adminViewController\CompanyServiceController;
+use \App\Http\Controllers\adminViewController\PartnerController;
+
 //landing
 use App\Http\Controllers\landingViewController\AboutController;
 use App\Http\Controllers\landingViewController\ContactController;
@@ -52,6 +54,9 @@ Route::middleware(['admin_auth'])->group(function () {
     Route::delete('/delete_service/{id}', [CompanyServiceController::class,'deleteService']);
     Route::post('/manage_service_status', [CompanyServiceController::class,'mangeServiceStatus'])->name('manage_service_status');
 
+    //partner manage
+    Route::get('/partners_management', [PartnerController::class,'index'])->name('partners_management');
+
 });
 
 
@@ -64,4 +69,5 @@ Route::get('/about',[AboutController::class,'index'])->name('about');
 Route::get('/service',[ServiceController::class,'index'])->name('service');
 Route::get('/products',[ProductsController::class,'index'])->name('products');
 Route::get('/productDetails',[productDetailsController::class,'index'])->name('productDetails');
+Route::get('/single_service_details', [ServiceController::class,'singleServiceDetails'])->name('single_service_details');
 

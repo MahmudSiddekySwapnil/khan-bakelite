@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <div class="col col-lg-6 col-md-5">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+{{--                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>--}}
                 </div>
                 <div class="col col-lg-3 col-md-3">
                     <div class="all-service-link">
@@ -58,62 +58,22 @@
             <div class="row">
                 <div class="col col-xs-12">
                     <div class="services-grids service-slider dots-s1">
+                        @foreach($company_service as $services)
                         <div class="grid">
                             <div class="inner mk-bg-img">
                                 <div class="details ">
                                     <div class="info">
-                                        <img src="landing_assets/images/services/img-1.jpg" alt class="bg-image">
+                                        <img src="{{ asset('storage/media/service/' . $services->picture) }}" alt class="bg-image">
                                         <a href="service-single.html">
-                                            <h3><i class="fi flaticon-construction"></i> Mechanical Works</h3>
+                                            <h3><i class="fi flaticon-construction"></i>{{$services->title}}</h3>
                                         </a>
-                                        <p>Ut enim ad minim veniam, quis nos trud exerci tation ullamco.</p>
-                                        <a href="service-single.html" class="more">Get Details</a>
+                                        <p>{{$services->service_description}}</p>
+                                        <a href="/single_service_details?id={{$services->id}}" class="more">Get Details</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="grid">
-                            <div class="inner mk-bg-img">
-                                <div class="details ">
-                                    <div class="info">
-                                        <img src="landing_assets/images/services/img-2.jpg" alt class="bg-image">
-                                        <a href="service-single.html">
-                                            <h3><i class="fi flaticon-construction"></i> Power &amp; Energy</h3>
-                                        </a>
-                                        <p>Ut enim ad minim veniam, quis nos trud exerci tation ullamco.</p>
-                                        <a href="service-single.html" class="more">Get Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="inner mk-bg-img">
-                                <div class="details ">
-                                    <div class="info">
-                                        <img src="landing_assets/images/services/img-3.jpg" alt class="bg-image">
-                                        <a href="service-single.html">
-                                            <h3><i class="fi flaticon-construction"></i> Petroleum Refinery</h3>
-                                        </a>
-                                        <p>Ut enim ad minim veniam, quis nos trud exerci tation ullamco.</p>
-                                        <a href="service-single.html" class="more">Get Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="inner mk-bg-img">
-                                <div class="details ">
-                                    <div class="info">
-                                        <img src="landing_assets/images/services/img-1.jpg" alt class="bg-image">
-                                        <a href="service-single.html">
-                                            <h3><i class="fi flaticon-construction"></i> Mechanical Works</h3>
-                                        </a>
-                                        <p>Ut enim ad minim veniam, quis nos trud exerci tation ullamco.</p>
-                                        <a href="service-single.html" class="more">Get Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div> <!-- end services-grids -->
                 </div> <!-- end col -->
             </div> <!-- end row -->
@@ -474,7 +434,8 @@
 
     <!-- start partners -->
     <section class="section-padding partners">
-        <h2 class="hidden">Partners</h2>
+        <h2 class="show" style="text-align: center">Partners</h2>
+        <hr>
         <div class="container">
             <div class="row">
                 <div class="col col-xs-12">

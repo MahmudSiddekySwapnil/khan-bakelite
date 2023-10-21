@@ -75,10 +75,10 @@
             </div>
         </div>
     </div> <!-- end upper-footer -->
-    <div class="copyright-info">
-        <div class="container">
-            <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p>
-        </div>
-    </div>
+{{--    <div class="copyright-info">--}}
+{{--        <div class="container">--}}
+{{--            <p>K</p>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 </footer>
 <!-- end site-footer -->

@@ -58,25 +58,29 @@
             <li class="side-nav-item">
                 <a href="{{route('dashboard')}}" class="side-nav-link">
                     <i class="fa fa-desktop"></i>                    {{--                    <span class="badge bg-success float-end">9+</span>--}}
-                    <span> Dashboard </span>
+                    <span > Dashboard </span>
                 </a>
             </li>
 
-            <li class="side-nav-item">
+            <li class="side-nav-item" >
+            <li class="side-nav-item" >
                 <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail"
                    class="side-nav-link">
                     <i class="fa fa-cog"></i>
-                    <span>UI Management <i class="fa fa-sort-desc"></i></span>
+                    <span >UI Management <i class="fa fa-sort-desc"></i></span>
 
                 </a>
                 <div class="collapse" id="sidebarEmail">
                     <ul class="side-nav-second-level">
                         <li>
 
-                            <a href="{{route('home_banner')}}"><i class="fa fa-plus"></i>&nbsp;Banner</a>
+                            <a href="{{route('home_banner')}}"><i class="fa fa-plus"></i>&nbsp;Banner Manage</a>
                         </li>
                         <li>
-                            <a href="{{route('company_service')}}"><i class="fa fa-plus"></i>&nbsp;Service</a>
+                            <a href="{{route('company_service')}}"><i class="fa fa-plus"></i>&nbsp;Service Manage</a>
+                        </li>
+                        <li>
+                            <a href="{{route('partners_management')}}"><i class="fa fa-plus"></i> partner Manage</a>
                         </li>
                     </ul>
                 </div>
@@ -85,42 +89,7 @@
 
             <li class="side-nav-title mt-2">Custom</li>
 
-            <li class="side-nav-item">
-                <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages"
-                   class="side-nav-link">
-                    <i class="ri-pages-fill"></i>
-                    <span> Pages </span>
-                    <span class="menu-arrow"></span>
-                </a>
-                <div class="collapse" id="sidebarPages">
-                    <ul class="side-nav-second-level">
-                        <li>
-                            <a href="pages-profile.html">Profile</a>
-                        </li>
-                        <li>
-                            <a href="pages-invoice.html">Invoice</a>
-                        </li>
-                        <li>
-                            <a href="pages-faq.html">FAQ</a>
-                        </li>
-                        <li>
-                            <a href="pages-pricing.html">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="pages-maintenance.html">Maintenance</a>
-                        </li>
-                        <li>
-                            <a href="pages-starter.html">Starter Page</a>
-                        </li>
-                        <li>
-                            <a href="pages-preloader.html">With Preloader</a>
-                        </li>
-                        <li>
-                            <a href="pages-timeline.html">Timeline</a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
+
 
 
         </ul>
