@@ -1,183 +1,235 @@
-<html>
-<head>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('custom/font-awesome-4.7.0/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
-    <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
-    <!-- Bootstrap 4 -->
-    <link rel="stylesheet" type="text/css" href="{{asset('plugins/DataTables/datatables.min.css')}}"/>
-    <script type="text/javascript" src="{{asset('plugins/DataTables/datatables.min.js')}}"></script>
-    <script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.3.1/js/buttons.html5.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
-    <link rel="stylesheet" href="front_assets/css/custom.css">
+@extends('admin_view.layouts.layouts')
+@extends('admin_view.common.datatableHeader')
+@section('container')
+    <div class="content-page">
+        <div class="content"> &nbsp;
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card card-primary card-outline">
+                            <div class="card-body">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <br>
+                                            <div class="col-lg-12 ml-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div class="hstack gap-2 flex-wrap">
+                                                            <button type="button" class="btn btn-primary"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#exampleModal"
+                                                                    data-bs-whatever="@getbootstrap">Partner Logo Upload
+                                                            </button>
+                                                        </div>
 
-</head>
+                                                        <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                             aria-labelledby="exampleModalLabel"
+                                                             aria-hidden="true">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                                            Partner Logo Upload</h5>
+                                                                        <button type="button" class="btn-close"
+                                                                                data-bs-dismiss="modal"
+                                                                                aria-label="Close"></button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <form enctype="multipart/form-data">
+                                                                            @csrf
 
-<body>
+                                                                            <div class="mb-3">
+                                                                                <label for="recipient-name"
+                                                                                       class="col-form-label">Partner
+                                                                                    Title:</label>
+                                                                                <input type="text" class="form-control"
+                                                                                       id="partner_title">
+                                                                            </div>
+                                                                            <div class="mb-3">
+                                                                                <label class="col-form-label"
+                                                                                       for="image">Choose
+                                                                                    Partner Logo:</label>
+                                                                                <input type="file" name="image"
+                                                                                       id="partner"
+                                                                                       class="form-control">
+                                                                            </div>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="card card-primary card-outline">
-                <div class="card-body">
-                    <div class="col-12">
-                        <div class="row">
+                                                                        </form>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary"
+                                                                                data-bs-dismiss="modal">
+                                                                            Close
+                                                                        </button>
+                                                                        <button type="button" class="btn btn-primary"
+                                                                                id="partnerSubmitForm">Save
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> <!-- end card-body -->
+                                                </div>
+                                            </div>
 
-                            <div class="col-lg-12">
-                                <br>
-                                <div class="card-body">
-                                    <section class="content">
-                                        <table id="users_table" class="table table-striped table-bordered"
-                                               style="width:100% ">
-                                            <thead>
-                                            <tr>
-                                                <th>NAME</th>
-                                                <th>EMAIL</th>
-                                                <th>PHONE</th>
-                                                <th>GENDER</th>
-                                                <th>ADDRESS</th>
-                                            </tr>
-                                            </thead>
-                                        </table>
-                                    </section>
+                                            <div class="card-body">
+                                                <section class="content">
+                                                    <table id="example" class="display"
+                                                           style="width:100%">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>ID</th>
+                                                            <th>Picture</th>
+                                                            <th>Status</th>
+                                                            <th>Action</th>
+
+                                                        </tr>
+                                                        </thead>
+                                                    </table>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+        </div> <!-- end col -->
     </div>
-</div>
-
-
-<script type="text/javascript" language="javascript">
-    $(document).ready(function () {
-        $('#users_table thead tr')
-            .clone(true)
-            .addClass('filters')
-            .appendTo('#users_table thead');
-        $('#users_table').DataTable({
-            buttons: {
-                dom: {
-                    button: {
-                        className: 'btn btn-outline-info ml-2 mb-4'
-                    }
-                },
-                buttons: [
-                    {
-                        extend: 'excel',
-                        text: '<i class="fa fa-file-excel-o"></i>',
-                        titleAttr: 'Export Excel',
-                        filename: 'users_list'
-                    },
-                    {
-                        extend: 'csvHtml5',
-                        text: '<i class="fa fa-file-csv"></i>',
-                        titleAttr: 'Export CSV',
-                        filename: 'users_list'
-                    },
-                    {
-                        extend: 'pdfHtml5',
-                        text: '<i class="fa fa-file-pdf-o"></i>',
-                        titleAttr: 'Export PDF',
-                        orientation: 'landscape',
-                        pageSize: 'LEGAL',
-                        filename: 'users_list',
-                    },
-                    {
-                        extend: 'print',
-                        text: '<i class="fa fa-print"></i>',
-                        titleAttr: 'Print',
-                        title: 'users_list'
-                    },
-                    {
-                        extend: 'copyHtml5',
-                        text: '<i class="fa fa-files-o"></i>',
-                        titleAttr: 'Copy Data to Clipboard',
-                    }
-                ],
-            },
-            orderCellsTop: true,
-            // fixedHeader: true,
-            "language": {
-                searchPlaceholder: "Search In Table Data",
-                search: "",
+    <script type="text/javascript" language="javascript">
+        let table = $('#example').DataTable({
+            ajax: {
+                url: "{{url('/show_partner_logo')}}",
             },
             searching: true,
-            pageLength: 25,
-            order: [[3, 'desc']], //making default sort and order on column 6
-            columnDefs: [
-                // {orderable: false, targets: 3}
-            ], //restricting sort and order on column 8
-
-            ajax: {
-                url: "{{url('/show_banner_details')}}",            },
-            // serverSide: true,
-            processing: true,
-            dom: '<"toolbar">RlBfrtip',
-            initComplete: function () {
-                $("#users_table").wrap("<div style='overflow-x:auto; width:100%;'> </div>"); //to make the table horizontally scrollable
-                var api = this.api();
-                // For each column
-                api
-                    .columns()
-                    .eq(0)
-                    .each(function (colIdx) {
-                        // Set the header cell to contain the input element
-                        var cell = $('.filters th').eq(
-                            $(api.column(colIdx).header()).index()
-                        );
-                        var title = $(cell).text();
-                        $(cell).html('<input type="text" placeholder="' + title + '" />');
-                        // On every keypress in this input
-                        $(
-                            'input',
-                            $('.filters th').eq($(api.column(colIdx).header()).index())
-                        )
-                            .off('keyup change')
-                            .on('change', function (e) {
-                                // Get the search value
-                                $(this).attr('title', $(this).val());
-                                var regexr = '({search})'; //$(this).parents('th').find('select').val();
-
-                                var cursorPosition = this.selectionStart;
-                                // Search the column for that value
-                                api
-                                    .column(colIdx)
-                                    .search(
-                                        this.value != ''
-                                            ? regexr.replace('{search}', '(((' + this.value + ')))')
-                                            : '',
-                                        this.value != '',
-                                        this.value == ''
-                                    )
-                                    .draw();
-                            })
-                            .on('keyup', function (e) {
-                                e.stopPropagation();
-
-                                $(this).trigger('change');
-                                $(this)
-                                    .focus()[0]
-                                    .setSelectionRange(cursorPosition, cursorPosition);
-                            });
-                    });
+            scrollX: true,
+            scrollY: true,
+            language: {
+                decimal: ',',
+                thousands: '.'
             },
             "columns": [
-                {data: "picture"},
+                {data: "id"},
+                {
+                    data: "image_url",
+                    render: function (data, type, row) {
+                        // Assuming "picture" contains the file path of the image
+                        return '<img class="image-modal" src="' + data + '" width="150" height="100" />';
+                    }
+                },
                 {data: "title"},
-                {data: "description"},
-                {data: "status"},
-                {data: "image_url"},
+                {
+                    data: null,
+                    render: function (data, type, row) {
+                        var status = row.status;
+                        var id = row.id;
+                        var buttonClass = status === 1 ? 'btn-success' : 'btn-danger';
+                        var buttonText = status === 1 ? 'Active' : 'Deactive';
+                        // Use a data attribute to store the ID for easy access in the click event
+                        return `<button  type="button" data-id="${id}" class="btn ${buttonClass} status-button">${buttonText}</button>`;
+                    }
+                },
+                // {
+                //     data: null,
+                //     render: function (data, type, row) {
+                //         var id = row.id;
+                //         return `<button type="button" data-id="${id}" class="btn btn-danger delete-button">Delete</button>`
+                //     }
+                // },
+
             ],
         });
-    });
-</script>
-<script src="front_assets/js/custom.js"></script>
 
-</body>
-</html>
+        $('#example tbody').on('click', 'button.status-button', function () {
+            var button = this;
+            let data = table.row($(this).closest('tr')).data();
+            let status = data.status;
+            let id = data.id;
+            status = status === 1 ? 0 : 1;
+            const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+            const params = {
+                id: id,
+                status: status,
+            };
+            const formData = new URLSearchParams(params);
+            let url = '/manage_partner_status';
+            fetch(url, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-CSRF-TOKEN': csrfToken,
+                },
+            }).then(response => response.json()) // Parse the JSON response
+                .then(data => {
+                    let message = data.message;
+                    if (message === 'successful') {
+                        window.location.href = data.url;
+                    } else {
+                        // Handle the error case if needed
+                    }
+                }).catch((err) => {
+                console.error(err);
+            })
+        });
+        $('#example tbody').on('click', 'img.image-modal', function () {
+            const imageUrl = $(this).attr('src');
+            // Open the modal and set the image source
+            $('#imageModal').modal('show');
+            $('#fullImage').attr('src', imageUrl);
+        });
+    </script>
+
+
+    <script>
+        $('#example tbody').on('click', 'button.delete-button', function () {
+            if (confirm("Are you sure you want to delete this image?")) {
+                const id = $(this).data('id');
+                // Send an AJAX request to delete the image
+                $.ajax({
+                    url: '/delete_banner/' + id,
+                    type: 'DELETE',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function (data) {
+                        if (data.message === 'successful') {
+                            window.location.href = data.url;
+                        }
+                    },
+                    error: function (err) {
+                        console.error(err);
+                    }
+                });
+            }
+        });
+
+    </script>
+
+
+
+    <!-- Modal using for showing full image -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><b>Banner</b></h5>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="fullImage" src="" width="100%" height="auto"/>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin_assets/js/PartnerManage.js"></script>
+
+@endsection

@@ -56,6 +56,10 @@ Route::middleware(['admin_auth'])->group(function () {
 
     //partner manage
     Route::get('/partners_management', [PartnerController::class,'index'])->name('partners_management');
+    Route::post('/manage_partner_status', [PartnerController::class,'managePartner'])->name('manage_partner_status');
+    Route::get('/show_partner_logo', [PartnerController::class,'showPartnerDetails'])->name('show_partner_logo');
+    Route::delete('/delete_partner_logo/{id}', [PartnerController::class,'deletePartnerLogo']);
+    Route::post('/manage_status', [PartnerController::class,'managePartnerStatus'])->name('manage_status');
 
 });
 
