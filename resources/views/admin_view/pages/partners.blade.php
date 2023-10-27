@@ -125,7 +125,7 @@
                         {
                             data: null,
                             render: function (data, type, row) {
-                                var status = row.status; // or Number(row.status)
+                                var status =  parseInt(row.status); // or Number(row.status)
 
                                 var id = row.id;
                                 var buttonClass = status === 1 ? 'btn-success' : 'btn-danger';
@@ -148,7 +148,7 @@
                 $('#example tbody').on('click', 'button.status-button', function () {
                     var button = this;
                     let data = table.row($(this).closest('tr')).data();
-                    let status = data.status;
+                    let status = parseInt(data.status);
 
                     let id = data.id;
                     status = status === 1 ? 0 : 1;
