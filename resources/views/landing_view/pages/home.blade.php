@@ -437,26 +437,23 @@
         <h2 class="show" style="text-align: center">Partners</h2>
         <hr>
         <div class="container">
+
             <div class="row">
+
                 <div class="col col-xs-12">
+
                     <div class="partners-slider">
+                        @foreach($company_partner as $list)
+
                         <div class="grid">
-                            <img src="landing_assets/images/partners/img-1.png" alt>
+                            <img src="{{ asset('storage/media/partner/' . $list->picture) }}" alt class="slider-bg">
                         </div>
-                        <div class="grid">
-                            <img src="landing_assets/images/partners/img-2.png" alt>
-                        </div>
-                        <div class="grid">
-                            <img src="landing_assets/images/partners/img-3.png" alt>
-                        </div>
-                        <div class="grid">
-                            <img src="landing_assets/images/partners/img-4.png" alt>
-                        </div>
-                        <div class="grid">
-                            <img src="landing_assets/images/partners/img-2.png" alt>
-                        </div>
+                        @endforeach
+
                     </div>
                 </div>
+
+
             </div> <!-- end row -->
         </div> <!-- end container -->
     </section>

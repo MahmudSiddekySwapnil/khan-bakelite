@@ -1,41 +1,41 @@
 <!-- Start header -->
 <header id="header" class="site-header header-style-5">
-    <div class="topbar topbar-style-2">
-        <div class="container">
-            <div class="row">
-                <div class="col col-sm-7">
-                    <div class="topbar-contact-info-wrapper">
-                        <div class="topbar-contact-info">
-                            <div>
-                                <i class="fa fa-location-arrow"></i>
-                                <div class="details">
-                                    <p>5523 Research Park Drive, Suite 110</p>
-                                </div>
-                            </div>
-                            <div>
-                                <i class="fa fa-phone"></i>
-                                <div class="details">
-                                    <p>+012 (3546) 547</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-sm-5">
-                    <div class="social">
-                        <span>Follow: </span>
-                        <ul class="social-links">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- end container -->
-    </div> <!-- end topbar -->
+{{--    <div class="topbar topbar-style-2">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col col-sm-7">--}}
+{{--                    <div class="topbar-contact-info-wrapper">--}}
+{{--                        <div class="topbar-contact-info">--}}
+{{--                            <div>--}}
+{{--                                <i class="fa fa-location-arrow"></i>--}}
+{{--                                <div class="details">--}}
+{{--                                    <p>5523 Research Park Drive, Suite 110</p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div>--}}
+{{--                                <i class="fa fa-phone"></i>--}}
+{{--                                <div class="details">--}}
+{{--                                    <p>+012 (3546) 547</p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col col-sm-5">--}}
+{{--                    <div class="social">--}}
+{{--                        <span>Follow: </span>--}}
+{{--                        <ul class="social-links">--}}
+{{--                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>--}}
+{{--                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>--}}
+{{--                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>--}}
+{{--                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>--}}
+{{--                            <li><a href="#"><i class="fa fa-rss"></i></a></li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div> <!-- end container -->--}}
+{{--    </div> <!-- end topbar -->--}}
 
     <div class="lower-topbar">
         <div class="container">
@@ -83,22 +83,22 @@
                 <ul class="nav navbar-nav">
                     <li class="menu-item-has-children">
                         <a href="/home">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="index-2.html">Home Style 1</a></li>
-                            <li><a href="index-3.html">Home Style 2</a></li>
-                            <li><a href="index-4.html">Home Style 3</a></li>
-                            <li><a href="index-5.html">Home Style 4</a></li>
-                            <li><a href="index-6.html">Home Style 5</a></li>
-                            <li><a href="index-7.html">Home Style 6</a></li>
-                            <li class="menu-item-has-children">
-                                <a href="#Level3">Thidr level</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Level3</a></li>
-                                    <li><a href="#">Level3</a></li>
-                                    <li><a href="#">Level3</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+{{--                        <ul class="sub-menu">--}}
+{{--                            <li><a href="index-2.html">Home Style 1</a></li>--}}
+{{--                            <li><a href="index-3.html">Home Style 2</a></li>--}}
+{{--                            <li><a href="index-4.html">Home Style 3</a></li>--}}
+{{--                            <li><a href="index-5.html">Home Style 4</a></li>--}}
+{{--                            <li><a href="index-6.html">Home Style 5</a></li>--}}
+{{--                            <li><a href="index-7.html">Home Style 6</a></li>--}}
+{{--                            <li class="menu-item-has-children">--}}
+{{--                                <a href="#Level3">Thidr level</a>--}}
+{{--                                <ul class="sub-menu">--}}
+{{--                                    <li><a href="#">Level3</a></li>--}}
+{{--                                    <li><a href="#">Level3</a></li>--}}
+{{--                                    <li><a href="#">Level3</a></li>--}}
+{{--                                </ul>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
                     </li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/service">Services</a></li>
