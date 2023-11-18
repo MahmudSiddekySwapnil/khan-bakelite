@@ -5,6 +5,7 @@ use App\Http\Controllers\adminViewController\AdminDashboardController;
 use \App\Http\Controllers\adminViewController\HomeBannerController;
 use \App\Http\Controllers\adminViewController\CompanyServiceController;
 use \App\Http\Controllers\adminViewController\PartnerController;
+use \App\Http\Controllers\adminViewController\CompanyFactController;
 
 //landing
 use App\Http\Controllers\landingViewController\AboutController;
@@ -60,6 +61,13 @@ Route::middleware(['admin_auth'])->group(function () {
     Route::get('/show_partner_logo', [PartnerController::class,'showPartnerDetails'])->name('show_partner_logo');
     Route::delete('/delete_partner_logo/{id}', [PartnerController::class,'deletePartnerLogo']);
     Route::post('/manage_status', [PartnerController::class,'managePartnerStatus'])->name('manage_status');
+
+    //companyServiceFact
+    Route::get('/company_service_fact', [CompanyFactController::class,'index'])->name('company_service_fact');
+    Route::post('/company_service_fact_processor', [CompanyFactController::class,'manageServiceFact'])->name('company_service_fact_processor');
+    Route::get('/show_company_service_fact', [CompanyFactController::class,'showCompanyServiceFact'])->name('show_company_service_fact');
+    Route::delete('/delete_service_fact/{id}', [CompanyFactController::class,'deleteServiceFact']);
+    Route::post('/service_fact_manage_status', [CompanyFactController::class,'manageServiceFactStatus'])->name('service_fact_manage_status');
 
 });
 

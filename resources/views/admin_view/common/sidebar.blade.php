@@ -80,7 +80,10 @@
                             <a href="{{route('company_service')}}"><i class="fa fa-plus"></i>&nbsp;Service Manage</a>
                         </li>
                         <li>
-                            <a href="{{route('partners_management')}}"><i class="fa fa-plus"></i> partner Manage</a>
+                            <a href="{{route('partners_management')}}"><i class="fa fa-plus"></i> Partner Manage</a>
+                        </li>
+                        <li>
+                            <a href="{{route('company_service_fact')}}"><i class="fa fa-plus"></i>Service Fact</a>
                         </li>
                     </ul>
                 </div>

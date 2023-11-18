@@ -314,87 +314,7 @@
     <!-- end recent-project -->
 
 
-    <!-- start about-us-faq -->
-    <section class="section-padding about-us-faq">
-        <div class="container">
-            <div class="row">
-                <div class="col col-lg-5">
-                    <div class="about-us-section">
-                        <div class="section-title-s3">
-                            <span>About us</span>
-                            <h2>Get full range of premium Industrial services for your business</h2>
-                        </div>
-                        <div class="details">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                            <p>laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                            <div class="btns">
-                                <a href="#" class="theme-btn-s3">Read More</a>
-                                <a href="#" class="theme-btn-s4">Company History</a>
-                            </div>
-                        </div>
-                        <div class="social">
-                            <p>Get Connected With Us:</p>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-lg-6 col-lg-offset-1">
-                    <div class="faq-section">
-                        <div class="section-title-s3">
-                            <span>FAQ</span>
-                            <h2>All these years, our different services have delivered long lasting innovation</h2>
-                        </div>
-                        <div class="details">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <div class="panel-group faq-accordion theme-accordion-s1" id="accordion">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">Ipsam voluptatem quia voluptas sit</a>
-                                    </div>
-                                    <div id="collapseOne" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Ted quia non numquam eius modi</a>
-                                    </div>
-                                    <div id="collapseTwo" class="panel-collapse collapse">
-                                        <div class="panel-body">
-                                            <p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Tempora incidunt ut labore</a>
-                                    </div>
-                                    <div id="collapseThree" class="panel-collapse collapse">
-                                        <div class="panel-body">
-                                            <p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. Quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end row -->
-        </div> <!-- end container -->
-        <div class="backhoe-loader">
-            <img src="landing_assets/images/backhoe-loader.png" alt>
-        </div>
-    </section>
-    <!-- end start about-us-faq -->
 
 
 
@@ -402,27 +322,32 @@
     <section class="fun-fact">
         <div class="container">
             <div class="row start-count">
+                @foreach($service_fact as $company_service_fact)
+
                 <div class="col col-sm-4">
+
                     <div class="grid">
-                        <h3><span class="counter" data-count="1200">00</span><span>+</span></h3>
+                        <h3><span class="counter" data-count="{{$company_service_fact->project_no}}">00</span><span>+</span></h3>
                         <span class="fact-title">Projects</span>
-                        <p>inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam</p>
+                        <p>{{$company_service_fact->project_des}}</p>
                     </div>
                 </div>
                 <div class="col col-sm-4">
                     <div class="grid">
-                        <h3><span class="counter" data-count="800">00</span><span>+</span></h3>
+                        <h3><span class="counter" data-count="{{$company_service_fact->client_no}}">00</span><span>+</span></h3>
                         <span class="fact-title">Clients</span>
-                        <p>inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam</p>
+                        <p>{{$company_service_fact->client_des}}</p>
                     </div>
                 </div>
                 <div class="col col-sm-4">
                     <div class="grid">
-                        <h3><span class="counter" data-count="99.5">00</span><span>%</span></h3>
+                        <h3><span class="counter" data-count="{{$company_service_fact->satisfaction_no}}">00</span><span>%</span></h3>
                         <span class="fact-title">satisfaction</span>
-                        <p>inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam</p>
+                        <p>{{$company_service_fact->satisfaction_des}}</p>
                     </div>
                 </div>
+                @endforeach
+
             </div>
         </div> <!-- end container -->
     </section>
@@ -432,9 +357,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- start partners -->
     <section class="section-padding partners">
-        <h2 class="show" style="text-align: center">Partners</h2>
+        <h2 class="show" style="text-align: center">PARTNERS</h2>
         <hr>
         <div class="container">
 
@@ -460,75 +402,6 @@
     <!-- end partners -->
 
 
-    <!-- start contact-section -->
-    <section class="contact-section section-padding parallax" data-bg-image="landing_assets/images/contact-section-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col col-md-4 col-md-offset-1 col-md-5">
-                    <div class="contact-section-contact-box">
-                        <div class="section-title-white">
-                            <h2>Contact</h2>
-                        </div>
-                        <div class="details">
-                            <p>For any kind of query, contact us with the details below.</p>
-                            <ul>
-                                <li><i class="fa fa-phone"></i> +123 (569) 254 78</li>
-                                <li><i class="fa fa-envelope"></i> info@industrial.com</li>
-                                <li><i class="fa fa-home"></i> #59, East Madison Ave, Melbourne Australia</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-lg-6 col-lg-offset-1 col-md-7">
-                    <div class="section-title-white">
-                        <h2>Request a quote</h2>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna aliqua.</p>
-
-                    <div class="contact-form-s1 form">
-                        <form method="post" id="contact-form" class="wpcf7-form contact-validation-active">
-                            <div>
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name">
-                            </div>
-                            <div>
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email">
-                            </div>
-                            <div>
-                                <label for="phone">Phone Number</label>
-                                <input type="text" id="phone" name="phone">
-                            </div>
-                            <div>
-                                <label>Business Type</label>
-                                <select name="select">
-                                    <option selected disabled> -- Select One -- </option>
-                                    <option value="Select One">Select One</option>
-                                    <option value="Select Two">Select Two</option>
-                                    <option value="Select Three">Select Three</option>
-                                </select>
-                            </div>
-                            <div class="submit-btn-wrap">
-                                <input value="Submit" class="theme-btn wpcf7-submit" type="submit">
-                                <div id="loader">
-                                    <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
-                                </div>
-                            </div>
-                            <div class="error-handling-messages">
-                                <div id="success">Thank you</div>
-                                <div id="error"> Error occurred while sending email. Please try again later. </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div> <!-- end row -->
-        </div> <!-- end container -->
-        <div class="contact-women wow fadeInLeft">
-            <img src="landing_assets/images/contact-women.png" alt>
-        </div>
-    </section>
-    <!-- end contact-section -->
 
 
     <!-- news-section -->
