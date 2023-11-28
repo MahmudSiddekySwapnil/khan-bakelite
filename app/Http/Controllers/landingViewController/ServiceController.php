@@ -10,9 +10,15 @@ class ServiceController extends Controller
 {
     //
     public function index(){
-        return view('landing_view.pages.service');
+        $result['company_service']=Service::where('status', 1)->get();
+
+        return view('landing_view.pages.service',$result);
     }
 
+    public function getServices($offset, $limit) {
+        $services = Service::skip($offset)->take($limit)->get();
+        return response()->json($services);
+    }
 
 
 
