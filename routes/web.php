@@ -6,6 +6,8 @@ use \App\Http\Controllers\adminViewController\HomeBannerController;
 use \App\Http\Controllers\adminViewController\CompanyServiceController;
 use \App\Http\Controllers\adminViewController\PartnerController;
 use \App\Http\Controllers\adminViewController\CompanyFactController;
+use \App\Http\Controllers\adminViewController\companyProfileController;
+use \App\Http\Controllers\adminViewController\TeamManageController;
 
 //landing
 use App\Http\Controllers\landingViewController\AboutController;
@@ -69,6 +71,18 @@ Route::middleware(['admin_auth'])->group(function () {
     Route::delete('/delete_service_fact/{id}', [CompanyFactController::class,'deleteServiceFact']);
     Route::post('/service_fact_manage_status', [CompanyFactController::class,'manageServiceFactStatus'])->name('service_fact_manage_status');
 
+    //Company profile manage
+    Route::get('/company_profile', [companyProfileController::class,'index'])->name('company_profile');
+    Route::post('/company_profile_manage', [companyProfileController::class,'companyProfileManage'])->name('company_profile_manage');
+    Route::get('/company_profile_data_show', [companyProfileController::class,'showProfileDetails'])->name('company_profile_data_show');
+
+    //Team members profile manage
+    Route::get('/team_profile', [TeamManageController::class,'index'])->name('team_profile');
+    Route::post('/team_members_profile_manage', [TeamManageController::class,'teamProfileManage'])->name('team_members_profile_manage');
+    Route::get('/show_all_team_members', [TeamManageController::class,'showTeamMemberProfileDetails'])->name('show_all_team_members');
+    Route::post('/manage_member_status', [TeamManageController::class,'mangeTeamProfileStatus'])->name('manage_member_status');
+    Route::delete('/delete_member_profile/{id}', [TeamManageController::class,'deleteTeamMemberProfile']);
+
 });
 
 
@@ -79,6 +93,7 @@ Route::get('/home',[HomeController::class,'index'])->name('home');
 Route::get('/contact',[ContactController::class,'index'])->name('contact');
 Route::get('/about',[AboutController::class,'index'])->name('about');
 Route::get('/service',[ServiceController::class,'index'])->name('service');
+Route::get('/get-services/{offset}/{limit}',[ServiceController::class,'getServices']);
 Route::get('/products',[ProductsController::class,'index'])->name('products');
 Route::get('/productDetails',[productDetailsController::class,'index'])->name('productDetails');
 Route::get('/single_service_details', [ServiceController::class,'singleServiceDetails'])->name('single_service_details');

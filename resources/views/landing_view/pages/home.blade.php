@@ -82,6 +82,65 @@
     <!-- end of services -->
 
 
+
+
+    <!-- start features -->
+    <section class="features section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-3">
+                    <div class="features-title">
+                        <h2>Why we are best</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor.</p>
+                    </div>
+                </div>
+                <div class="col col-md-3 col-sm-4">
+                    <div class="feature-grid">
+                        <div class="icon">
+                            <i class="fi flaticon-people"></i>
+                        </div>
+                        <div class="details">
+                            <h3>Expert Engineers</h3>
+                            <p>Sed quia non numquam eius modi tempo ra incidunt ut labore et dolore magnam aliq uam quaera.</p>
+                            <a href="#" class="more">Details <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-3 col-sm-4">
+                    <div class="feature-grid">
+                        <div class="icon">
+                            <i class="fi flaticon-support"></i>
+                        </div>
+                        <div class="details">
+                            <h3>Customer Support</h3>
+                            <p>Sed quia non numquam eius modi tempo ra incidunt ut labore et dolore magnam aliq uam quaera.</p>
+                            <a href="#" class="more">Details <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-3 col-sm-4">
+                    <div class="feature-grid">
+                        <div class="icon">
+                            <i class="fi flaticon-time-passing"></i>
+                        </div>
+                        <div class="details">
+                            <h3>Delivery On time</h3>
+                            <p>Sed quia non numquam eius modi tempo ra incidunt ut labore et dolore magnam aliq uam quaera.</p>
+                            <a href="#" class="more">Details <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end container -->
+    </section>
+    <!-- end features -->
+
+
+
+
+
+
+
     <!-- start testimonials -->
     <section class="testimonials section-padding parallax" data-bg-image="assets/images/testimonials/bg.jpg">
         <div class="container">
@@ -363,6 +422,18 @@
 
 
 
+    <!-- start cta -->
+    <section class="cta section-padding parallax" data-bg-image="landing_assets/images/cta-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col col-xs-12">
+                    <h2>Our one and only priority is the <span>customer satisfaction</span></h2>
+                    <a href="#" class="theme-btn-s5">Get a quote</a>
+                </div>
+            </div>
+        </div> <!-- end container -->
+    </section>
+    <!-- end cta -->
 
 
 
@@ -371,8 +442,7 @@
 
 
 
-
-
+&nbsp;
 
     <!-- start partners -->
     <section class="section-padding partners">

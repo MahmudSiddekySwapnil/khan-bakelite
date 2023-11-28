@@ -74,6 +74,10 @@
                     <ul class="side-nav-second-level">
                         <li>
 
+                            <a href="{{route('team_profile')}}"><i class="fa fa-plus"></i>&nbsp;Team Manage</a>
+                        </li>
+                        <li>
+
                             <a href="{{route('home_banner')}}"><i class="fa fa-plus"></i>&nbsp;Banner Manage</a>
                         </li>
                         <li>
@@ -83,8 +87,12 @@
                             <a href="{{route('partners_management')}}"><i class="fa fa-plus"></i> Partner Manage</a>
                         </li>
                         <li>
+                            <a href="{{route('company_profile')}}"><i class="fa fa-plus"></i>Company Profile</a>
+                        </li>
+                        <li>
                             <a href="{{route('company_service_fact')}}"><i class="fa fa-plus"></i>Service Fact</a>
                         </li>
+
                     </ul>
                 </div>
             </li>
