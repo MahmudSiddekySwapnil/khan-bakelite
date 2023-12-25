@@ -67,30 +67,32 @@
                 <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail"
                    class="side-nav-link">
                     <i class="fa fa-cog"></i>
-                    <span >UI Management <i class="fa fa-sort-desc"></i></span>
+                    <span >UI Management <i class="fa-solid fa-arrows-up-down"></i></span>
 
                 </a>
                 <div class="collapse" id="sidebarEmail">
                     <ul class="side-nav-second-level">
                         <li>
-
-                            <a href="{{route('team_profile')}}"><i class="fa fa-plus"></i>&nbsp;Team Manage</a>
+                            <a href="{{route('products_list')}}"><i class="fa fa-plus"></i>&nbsp; Product Manage</a>
+                        </li>
+                        <li>
+                            <a href="{{route('team_profile')}}"><i class="fa fa-plus"></i>&nbsp; Team Manage</a>
                         </li>
                         <li>
 
-                            <a href="{{route('home_banner')}}"><i class="fa fa-plus"></i>&nbsp;Banner Manage</a>
+                            <a href="{{route('home_banner')}}"><i class="fa fa-plus"></i>&nbsp; Banner Manage</a>
                         </li>
                         <li>
-                            <a href="{{route('company_service')}}"><i class="fa fa-plus"></i>&nbsp;Service Manage</a>
+                            <a href="{{route('company_service')}}"><i class="fa fa-plus"></i>&nbsp; Service Manage</a>
                         </li>
                         <li>
-                            <a href="{{route('partners_management')}}"><i class="fa fa-plus"></i> Partner Manage</a>
+                            <a href="{{route('partners_management')}}"><i class="fa fa-plus"></i>&nbsp; Partner Manage</a>
                         </li>
                         <li>
-                            <a href="{{route('company_profile')}}"><i class="fa fa-plus"></i>Company Profile</a>
+                            <a href="{{route('company_profile')}}"><i class="fa fa-plus"></i>&nbsp; Company Profile</a>
                         </li>
                         <li>
-                            <a href="{{route('company_service_fact')}}"><i class="fa fa-plus"></i>Service Fact</a>
+                            <a href="{{route('company_service_fact')}}"><i class="fa fa-plus"></i>&nbsp; Service Fact</a>
                         </li>
 
                     </ul>

@@ -10,6 +10,7 @@
     <meta content="kahn" name="description" />
     <meta content="khan" name="author" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/977ecd7653.js" crossorigin="anonymous"></script>
 
     <!-- App favicon -->
 

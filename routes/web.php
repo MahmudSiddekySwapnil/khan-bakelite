@@ -8,6 +8,7 @@ use \App\Http\Controllers\adminViewController\PartnerController;
 use \App\Http\Controllers\adminViewController\CompanyFactController;
 use \App\Http\Controllers\adminViewController\companyProfileController;
 use \App\Http\Controllers\adminViewController\TeamManageController;
+use \App\Http\Controllers\adminViewController\ProductManageController;
 
 //landing
 use App\Http\Controllers\landingViewController\AboutController;
@@ -82,6 +83,10 @@ Route::middleware(['admin_auth'])->group(function () {
     Route::get('/show_all_team_members', [TeamManageController::class,'showTeamMemberProfileDetails'])->name('show_all_team_members');
     Route::post('/manage_member_status', [TeamManageController::class,'mangeTeamProfileStatus'])->name('manage_member_status');
     Route::delete('/delete_member_profile/{id}', [TeamManageController::class,'deleteTeamMemberProfile']);
+
+    //product manage
+    Route::get('/products_list', [ProductManageController::class,'index'])->name('products_list');
+    Route::get('/products_manage', [ProductManageController::class,'manageProduct'])->name('products_manage');
 
 });
 
