@@ -21,15 +21,17 @@
     <section class="products-section shop section-padding">
         <div class="container">
             <div class="row products-grids">
+                @foreach($products_list as $products)
                 <div class="col col-md-4 col-xs-6">
+
                     <div class="grid">
                         <div class="img-holder-info-list">
                             <div class="img-holder">
-                                <img src="landing_assets/product/DSC01714.JPG" alt class="img img-responsive">
+                                <img src="{{ asset('storage/media/product/' . $products->image) }}" alt class="img img-responsive">
                             </div>
                             <div class="info-list">
                                 <div>
-                                    <a href="/productDetails"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
+                                    <a href="/productDetails?id={{$products->id}}"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
                                 </div>
                                 <div>
                                     <a href="/productDetails"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
@@ -40,7 +42,7 @@
                             </div>
                         </div>
                         <div class="product-info">
-                            <h3><a href="#">Splash Toy</a></h3>
+                            <h3><a href="#">{{ $products->product_name }}</a></h3>
                             <div class="rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -48,304 +50,52 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div>
-                            <span class="price">$15.00</span>
+                            <span class="price">Tk {{ $products->product_price }}</span>
                         </div>
                     </div>
+
                 </div>
-
-                <div class="col col-md-4 col-xs-6">
-                    <div class="grid">
-                        <div class="img-holder-info-list">
-                            <div class="img-holder">
-                                <img src="landing_assets/product/DSC01715.JPG" alt class="img img-responsive">
-                            </div>
-                            <div class="info-list">
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
-                                </div>
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
-                                </div>
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-3.png" alt></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3><a href="#">Splash Toy</a></h3>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <span class="price">$15.00</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-md-4 col-xs-6">
-                    <div class="grid">
-                        <div class="img-holder-info-list">
-                            <div class="img-holder">
-                                <img src="landing_assets/product/DSC01729.JPG" alt class="img img-responsive">
-                            </div>
-                            <div class="info-list">
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
-                                </div>
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
-                                </div>
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-3.png" alt></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3><a href="#">Splash Toy</a></h3>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <span class="price">$15.00</span>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-                <div class="col col-md-4 col-xs-6">
-                    <div class="grid">
-                        <div class="img-holder-info-list">
-                            <div class="img-holder">
-                                <img src="landing_assets/product/DSC01824.JPG" alt class="img img-responsive">
-                            </div>
-                            <div class="info-list">
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
-                                </div>
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
-                                </div>
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-3.png" alt></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3><a href="#">Splash Toy</a></h3>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <span class="price">$15.00</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-md-4 col-xs-6">
-                    <div class="grid">
-                        <div class="img-holder-info-list">
-                            <div class="img-holder">
-                                <img src="landing_assets/product/DSC01850.JPG" alt class="img img-responsive">
-                            </div>
-                            <div class="info-list">
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
-                                </div>
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
-                                </div>
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-3.png" alt></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3><a href="#">Splash Toy</a></h3>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <span class="price">$15.00</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-md-4 col-xs-6">
-                    <div class="grid">
-                        <div class="img-holder-info-list">
-                            <div class="img-holder">
-                                <img src="landing_assets/product/DSC01867.JPG" alt class="img img-responsive">
-                            </div>
-                            <div class="info-list">
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
-                                </div>
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
-                                </div>
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-3.png" alt></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3><a href="#">Splash Toy</a></h3>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <span class="price">$15.00</span>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-                <div class="col col-md-4 col-xs-6">
-                    <div class="grid">
-                        <div class="img-holder-info-list">
-                            <div class="img-holder">
-                                <img src="landing_assets/product/DSC01890.JPG" alt class="img img-responsive">
-                            </div>
-                            <div class="info-list">
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
-                                </div>
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
-                                </div>
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-3.png" alt></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3><a href="#">Splash Toy</a></h3>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <span class="price">$15.00</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-md-4 col-xs-6">
-                    <div class="grid">
-                        <div class="img-holder-info-list">
-                            <div class="img-holder">
-                                <img src="landing_assets/product/DSC01897.JPG" alt class="img img-responsive">
-                            </div>
-                            <div class="info-list">
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
-                                </div>
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
-                                </div>
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-3.png" alt></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3><a href="#">Splash Toy</a></h3>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <span class="price">$15.00</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-md-4 col-xs-6">
-                    <div class="grid">
-                        <div class="img-holder-info-list">
-                            <div class="img-holder">
-                                <img src="landing_assets/product/DSC01911.JPG" alt class="img img-responsive">
-                            </div>
-                            <div class="info-list">
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-1.png" alt></a>
-                                </div>
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-2.png" alt></a>
-                                </div>
-                                <div>
-                                    <a href="#"><img src="landing_assets/images/shop/icons/icon-3.png" alt></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3><a href="#">Splash Toy</a></h3>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <span class="price">$15.00</span>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div> <!-- end row -->
-
-
-
-
-
-
-
-
-
-
 
 
             <div class="pagination-wrapper">
                 <ul class="pg-pagination">
-                    <li>
-                        <a href="#" aria-label="Previous">
-                            <i class="fa fa-angle-double-left"></i>
-                        </a>
-                    </li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li>
-                        <a href="#" aria-label="Next">
-                            <i class="fa fa-angle-double-right"></i>
-                        </a>
-                    </li>
+                    {{-- Previous Page Link --}}
+                    @if ($products_list->onFirstPage())
+                        <li class="disabled">
+                            <span aria-hidden="true"><i class="fa fa-angle-double-left"></i></span>
+                        </li>
+                    @else
+                        <li>
+                            <a href="{{ $products_list->previousPageUrl() }}" aria-label="Previous">
+                                <i class="fa fa-angle-double-left"></i>
+                            </a>
+                        </li>
+                    @endif
+
+                    {{-- Pagination Elements --}}
+                    @for ($page = 1; $page <= $products_list->lastPage(); $page++)
+                        <li class="{{ $page == $products_list->currentPage() ? 'active' : '' }}">
+                            <a href="{{ $products_list->url($page) }}">{{ $page }}</a>
+                        </li>
+                    @endfor
+
+                    {{-- Next Page Link --}}
+                    @if ($products_list->hasMorePages())
+                        <li>
+                            <a href="{{ $products_list->nextPageUrl() }}" aria-label="Next">
+                                <i class="fa fa-angle-double-right"></i>
+                            </a>
+                        </li>
+                    @else
+                        <li class="disabled">
+                            <span aria-hidden="true"><i class="fa fa-angle-double-right"></i></span>
+                        </li>
+                    @endif
                 </ul>
             </div>
+
         </div> <!-- end container -->
     </section>
     <!-- end products-section -->

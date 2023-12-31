@@ -87,7 +87,10 @@ Route::middleware(['admin_auth'])->group(function () {
     //product manage
     Route::get('/products_list', [ProductManageController::class,'index'])->name('products_list');
     Route::get('/products_manage', [ProductManageController::class,'manageProduct'])->name('products_manage');
-
+    Route::post('/products_manage_process', [ProductManageController::class,'manageProductProcess'])->name('products_manage_process');
+    Route::get('/show_product_details', [ProductManageController::class,'showProductData'])->name('show_product_details');
+    Route::post('/manage_product_status', [ProductManageController::class,'mangeProductStatus'])->name('manage_product_status');
+    Route::delete('/delete_product/{id}', [ProductManageController::class,'deleteProduct']);
 });
 
 
@@ -102,4 +105,5 @@ Route::get('/get-services/{offset}/{limit}',[ServiceController::class,'getServic
 Route::get('/products',[ProductsController::class,'index'])->name('products');
 Route::get('/productDetails',[productDetailsController::class,'index'])->name('productDetails');
 Route::get('/single_service_details', [ServiceController::class,'singleServiceDetails'])->name('single_service_details');
+//Route::get('/products', [ProductsController::class,'singleServiceDetails'])->name('single_service_details');
 

@@ -6,6 +6,8 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Services\ImageDeleteService;
 use App\Services\ImageUploadService;
+use App\Services\MultipleImageUploadService;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -18,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
         //
         $this->app->bind(ImageDeleteService::class);
         $this->app->bind(ImageUploadService::class);
-
+        $this->app->bind(MultipleImageUploadService::class);
 
     }
 

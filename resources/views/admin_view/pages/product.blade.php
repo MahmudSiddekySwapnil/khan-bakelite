@@ -142,8 +142,15 @@
                                                         <tr>
                                                             <th>ID</th>
                                                             <th>Picture</th>
-                                                            <th>Title</th>
-                                                            <th>Description</th>
+                                                            <th>Product Name</th>
+                                                            <th>Product Price</th>
+                                                            <th>Product slug</th>
+                                                            <th>Product quantity</th>
+                                                            <th>Product Key</th>
+                                                            <th>Product short Des.</th>
+                                                            <th>Product Des.</th>
+                                                            <th>Product warranty</th>
+                                                            <th>Technical Specification</th>
                                                             <th>Status</th>
                                                             <th>Action</th>
 
@@ -163,6 +170,122 @@
         </div>
     </div>
 
+    <script type="text/javascript" language="javascript">
+        let table = $('#example').DataTable({
+            ajax: {
+                url: "{{url('/show_product_details')}}",
+            },
+            searching: true,
+            scrollX: true,
+            scrollY: true,
+            language: {
+                decimal: ',',
+                thousands: '.'
+            },
+            "columns": [
+                {data: "id"},
+                {
+                    data: "image_url",
+                    render: function (data, type, row) {
+                        // Assuming "picture" contains the file path of the image
+                        return '<img class="image-modal" src="' + data + '" width="150" height="100" />';
+                    }
+                },
+                {data: "product_name"},
+                {data: "product_price"},
+                {data: "product_slug"},
+                {data: "product_quantity"},
+                {data: "product_key"},
+                {data: "product_short_description"},
+                {data: "product_description"},
+                {data: "warranty"},
+                {data: "technical_specification"},
+                {
+                    data: null,
+                    render: function (data, type, row) {
+                        var status = parseInt(row.status);
+                        var id = row.id;
+                        var buttonClass = status === 1 ? 'btn-success' : 'btn-danger';
+                        var buttonText = status === 1 ? 'Active' : 'Deactive';
+                        // Use a data attribute to store the ID for easy access in the click event
+                        return `<button  type="button" data-id="${id}" class="btn ${buttonClass} status-button">${buttonText}</button>`;
+                    }
+                },
+                {
+                    data: null,
+                    render: function (data, type, row) {
+                        var id = row.id;
+                        return `<button type="button" data-id="${id}" class="btn btn-danger delete-button">Delete</button>`
+                    }
+                },
 
+            ],
+        });
+
+        $('#example tbody').on('click', 'button.status-button', function () {
+            var button = this;
+            let data = table.row($(this).closest('tr')).data();
+            let status = parseInt(data.status);
+            let id = data.id;
+            status = status === 1 ? 0 : 1;
+            const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+            const params = {
+                id: id,
+                status: status,
+            };
+            const formData = new URLSearchParams(params);
+            let url = '/manage_product_status';
+            fetch(url, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-CSRF-TOKEN': csrfToken,
+                },
+            }).then(response => response.json()) // Parse the JSON response
+                .then(data => {
+                    let message = data.message;
+                    if (message === 'successful') {
+                        window.location.href = data.url;
+                    } else {
+                        // Handle the error case if needed
+                    }
+                }).catch((err) => {
+                console.error(err);
+            })
+        });
+        $('#example tbody').on('click', 'img.image-modal', function () {
+            const imageUrl = $(this).attr('src');
+            // Open the modal and set the image source
+            $('#imageModal').modal('show');
+            $('#fullImage').attr('src', imageUrl);
+        });
+    </script>
+
+
+    <script>
+        $('#example tbody').on('click', 'button.delete-button', function () {
+            if (confirm("Are you sure you want to delete this image?")) {
+                const id = $(this).data('id');
+                // Send an AJAX request to delete the image
+                $.ajax({
+                    url: '/delete_product/' + id,
+                    type: 'DELETE',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function (data) {
+                        if (data.message === 'successful') {
+                            window.location.href = data.url;
+                        }
+                    },
+                    error: function (err) {
+                        console.error(err);
+                    }
+                });
+            }
+        });
+
+    </script>
 
 @endsection
