@@ -7,9 +7,10 @@
                     <div class="widget about-widget">
                         <div class="footer-logo"><img src="landing_assets/images/khan.png" alt></div>
                         <ul class="contact-info">
-                            <li><i class="fa fa-home"></i> 555 Main St, Salt Lake City, UT 84101</li>
-                            <li><i class="fa fa-phone"></i> +1-(547)-257</li>
-                            <li><i class="fa fa-home"></i> Working Hours: <br>Mon-Fri (9 am - 8 pm)</li>
+                            <li><i class="fa fa-home"></i>KHAN BAKELITE PRODUCTS, Bhatto 9370, Chulkati</li>
+                            <li><i class="fa fa-phone"></i>+8801686876007</li>
+                            <li><i class="fa fa-phone"></i>+8801912643474</li>
+                            <li><i class="fa fa-home"></i> Working Hours:<br>Sat-Fri (9 am - 8 pm)</li>
                         </ul>
                     </div>
                 </div>
@@ -18,11 +19,7 @@
                     <div class="widget service-links-widget">
                         <h3>Services</h3>
                         <ul>
-                            <li><a href="#">Agriculture Processing</a></li>
-                            <li><a href="#">Chemical Research</a></li>
-                            <li><a href="#">Metal Engineering</a></li>
-                            <li><a href="#">Mechanical Engineering</a></li>
-                            <li><a href="#">Petroleum &amp; Gas</a></li>
+                            <li><a href="#">Industrial Processing</a></li>
                         </ul>
                     </div>
                 </div>
@@ -43,30 +40,30 @@
 {{--                            <li><a href="#">Contact Us</a></li>--}}
 {{--                            <li><a href="#">Privacy Policy</a></li>--}}
 {{--                        </ul>--}}
-                        <img style="height:200px" src="landing_assets/images/khanbp.png" alt="Light Blue Denim Dress">
+                        <img style="height:200px" src="landing_assets/images/kahnqr.png" alt="Light Blue Denim Dress">
                     </div>
                 </div>
 
                 <div class="col col-md-3 col-sm-6">
                     <div class="widget twitter-feed-widget">
-                        <h3>Twitter Feed</h3>
+                        <h3>Social Media Feed</h3>
                         <ul>
                             <li>
                                 <div class="text">
-                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Ed quia con sequuntur magni dolores.</p>
+                                    <p>Facebook</p>
                                 </div>
                                 <div class="info-box">
-                                    <i class="fa fa-twitter"></i>
-                                    <strong><a href="#">@Mark Wahlberg</a></strong>
+                                    <i class="fa fa-facebook"></i>
+                                    <strong><a href="#">F</a></strong>
                                 </div>
                             </li>
                             <li>
                                 <div class="text">
-                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Ed quia con sequuntur magni dolores.</p>
+                                    <p>Twitter</p>
                                 </div>
                                 <div class="info-box">
                                     <i class="fa fa-twitter"></i>
-                                    <strong><a href="#">@Mark Wahlberg</a></strong>
+                                    <strong><a href="#">T</a></strong>
                                 </div>
                             </li>
                         </ul>

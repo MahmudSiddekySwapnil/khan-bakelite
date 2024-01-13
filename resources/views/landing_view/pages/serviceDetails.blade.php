@@ -7,10 +7,10 @@
         <div class="container">
             <div class="row">
                 <div class="col col-xs-12">
-                    <h2>Service single</h2>
+                    <h2>Service Details</h2>
                     <ol class="breadcrumb">
-                        <li><a href="index-2.html">Home</a></li>
-                        <li>Service single</li>
+                        <li><a href="#">Home</a></li>
+                        <li>Service Details</li>
                     </ol>
                 </div>
             </div> <!-- end row -->

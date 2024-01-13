@@ -7,7 +7,7 @@
             <div class="col col-xs-12">
                 <h2>About us</h2>
                 <ol class="breadcrumb">
-                    <li><a href="index-2.html">Home</a></li>
+                    <li><a href="#">Home</a></li>
                     <li>About us</li>
                 </ol>
             </div>

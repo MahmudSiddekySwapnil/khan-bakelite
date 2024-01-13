@@ -7,8 +7,8 @@
                 <div class="col col-xs-12">
                     <h2>Shop</h2>
                     <ol class="breadcrumb">
-                        <li><a href="index-2.html">Home</a></li>
-                        <li>Shop</li>
+                        <li><a href="#">Home</a></li>
+                        <li>Product</li>
                     </ol>
                 </div>
             </div> <!-- end row -->

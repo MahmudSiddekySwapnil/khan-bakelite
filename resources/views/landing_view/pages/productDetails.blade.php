@@ -5,10 +5,10 @@
         <div class="container">
             <div class="row">
                 <div class="col col-xs-12">
-                    <h2>Shop Details</h2>
+                    <h2>Product Details</h2>
                     <ol class="breadcrumb">
-                        <li><a href="index-2.html">Home</a></li>
-                        <li>Shop Details</li>
+                        <li><a href="#">Home</a></li>
+                        <li>Product Details</li>
                     </ol>
                 </div>
             </div> <!-- end row -->

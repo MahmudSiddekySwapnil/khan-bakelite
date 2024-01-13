@@ -24,7 +24,7 @@ document.getElementById("submitCompanyFactForm").addEventListener("click", funct
                 Swal.fire({
                     icon: 'success',
                     title: 'Success',
-                    text: 'Banner uploaded successfully',
+                    text: 'Image uploaded successfully',
                     timer: 3000,
                     showConfirmButton: false, // Hide the "OK" button
                 });

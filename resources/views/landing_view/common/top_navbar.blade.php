@@ -116,13 +116,13 @@
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="#">Gallery</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog.html">Blog grid</a></li>
-                            <li><a href="blog-right-sidebar.html">Blog right sidebar</a></li>
-                            <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-                            <li><a href="blog-details.html">Blog single</a></li>
-                        </ul>
+                        <a href="/company-gallery">Gallery</a>
+{{--                        <ul class="sub-menu">--}}
+{{--                            <li><a href="blog.html">Blog grid</a></li>--}}
+{{--                            <li><a href="blog-right-sidebar.html">Blog right sidebar</a></li>--}}
+{{--                            <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>--}}
+{{--                            <li><a href="blog-details.html">Blog single</a></li>--}}
+{{--                        </ul>--}}
                     </li>
                     <li><a href="/contact">Contact</a></li>
                 </ul>
@@ -166,7 +166,7 @@
                 </div>
             </div>
 
-            <a href="#" class="theme-btn-s2 request-quote">Request Quote</a>
+            <a href="#" class="theme-btn-s2 request-quote"></a>
         </div><!-- end of container -->
     </nav> <!-- end navigation -->
 </header>

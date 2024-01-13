@@ -9,6 +9,7 @@ use \App\Http\Controllers\adminViewController\CompanyFactController;
 use \App\Http\Controllers\adminViewController\companyProfileController;
 use \App\Http\Controllers\adminViewController\TeamManageController;
 use \App\Http\Controllers\adminViewController\ProductManageController;
+use \App\Http\Controllers\adminViewController\GalleryController;
 
 //landing
 use App\Http\Controllers\landingViewController\AboutController;
@@ -17,6 +18,7 @@ use App\Http\Controllers\landingViewController\HomeController;
 use App\Http\Controllers\landingViewController\ProductsController;
 use App\Http\Controllers\landingViewController\ServiceController;
 use App\Http\Controllers\landingViewController\productDetailsController;
+use App\Http\Controllers\landingViewController\GalleryDetailsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -91,6 +93,14 @@ Route::middleware(['admin_auth'])->group(function () {
     Route::get('/show_product_details', [ProductManageController::class,'showProductData'])->name('show_product_details');
     Route::post('/manage_product_status', [ProductManageController::class,'mangeProductStatus'])->name('manage_product_status');
     Route::delete('/delete_product/{id}', [ProductManageController::class,'deleteProduct']);
+
+    //Gallery manage
+    Route::get('/gallery', [GalleryController::class,'index'])->name('gallery');
+    Route::post('/home_gallery_processor', [GalleryController::class,'galleryProcessing'])->name('home_gallery_processor');
+    Route::get('/show_gallery_details', [GalleryController::class,'showGalleryData'])->name('show_gallery_details');
+    Route::post('/manage_gallery_status', [GalleryController::class,'mangeGalleryStatus'])->name('manage_gallery_status');
+    Route::delete('/delete_gallery/{id}', [GalleryController::class,'deleteGallery']);
+
 });
 
 
@@ -105,5 +115,7 @@ Route::get('/get-services/{offset}/{limit}',[ServiceController::class,'getServic
 Route::get('/products',[ProductsController::class,'index'])->name('products');
 Route::get('/productDetails',[productDetailsController::class,'index'])->name('productDetails');
 Route::get('/single_service_details', [ServiceController::class,'singleServiceDetails'])->name('single_service_details');
+Route::get('/company-gallery',[GalleryDetailsController::class,'index'])->name('gallery');
+
 //Route::get('/products', [ProductsController::class,'singleServiceDetails'])->name('single_service_details');
 
