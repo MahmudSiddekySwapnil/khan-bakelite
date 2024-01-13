@@ -115,7 +115,7 @@ Route::get('/get-services/{offset}/{limit}',[ServiceController::class,'getServic
 Route::get('/products',[ProductsController::class,'index'])->name('products');
 Route::get('/productDetails',[productDetailsController::class,'index'])->name('productDetails');
 Route::get('/single_service_details', [ServiceController::class,'singleServiceDetails'])->name('single_service_details');
-Route::get('/company-gallery',[GalleryDetailsController::class,'index'])->name('gallery');
+Route::get('/company-gallery',[GalleryDetailsController::class,'index'])->name('company-gallery');
 
 //Route::get('/products', [ProductsController::class,'singleServiceDetails'])->name('single_service_details');
 

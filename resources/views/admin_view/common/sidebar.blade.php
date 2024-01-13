@@ -78,6 +78,10 @@
                         <li>
                             <a href="{{route('team_profile')}}"><i class="fa fa-plus"></i>&nbsp; Team Manage</a>
                         </li>
+
+                        <li>
+                            <a href="{{route('gallery')}}"><i class="fa fa-plus"></i>&nbsp; Gallery Manage</a>
+                        </li>
                         <li>
 
                             <a href="{{route('home_banner')}}"><i class="fa fa-plus"></i>&nbsp; Banner Manage</a>
